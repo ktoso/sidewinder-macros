@@ -1,1 +1,5 @@
-notify-send "pressed S1, in profile 1" --icon=/home/ktoso/sidewinder.jpg 
+#!/bin/sh
+source "`dirname $0`/../notify.sh"
+
+desc="P 1 S 10"
+tell "$desc"

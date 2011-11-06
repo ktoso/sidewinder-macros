@@ -1,4 +1,7 @@
 #!/bin/sh
+source "`dirname $0`/../notify.sh"
+desc="S 13 macro"
+tell "$desc"
 
 Xdialog --wrap --title "Shutdown `hostname`?"\
         --yesno "Do you want to shut down `hostname`?" 0 0
