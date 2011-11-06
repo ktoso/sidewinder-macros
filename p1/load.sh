@@ -2,4 +2,4 @@
 source "`dirname $0`/../notify.sh"
 
 desc='alpha mode'
-tell "$desc"
+tell "$desc" 100
