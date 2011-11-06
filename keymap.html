@@ -1,0 +1,347 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+    <title>Sidewinder X6 KeyMap</title>
+    <style type="text/css">
+        @import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+
+        body {
+            font-size: 1.5em;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        h1, h2 {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            margin: 2px;
+        }
+
+        .key {
+            border: black solid 1px;
+
+            position: relative;
+            float: left;
+            clear: both;
+            width: 3em;
+            height: 3em;
+        }
+
+        .code {
+            font-size: 0.8em;
+            color: gray;
+            position: absolute;
+            bottom: 0;
+            left: 2px;
+        }
+
+        .desc {
+            font-size: 0.7em;
+            line-height: 0.7em;
+        }
+
+        .col {
+            width: 3em;
+            float: left;
+            clear: none;
+        }
+
+        .first {
+            clear: left;
+        }
+
+        .pad {
+            width: 13em;
+            margin-left: 1em;
+        }
+
+        .s13 {
+            margin: 0 0 0 3em;
+            width: 6em;
+            clear: both;
+        }
+
+        .s28 {
+            width: 6.15em;
+        }
+
+        .s30, .s24 {
+            margin: 6px 2px;
+            height: 6em;
+        }
+    </style>
+    <script type="text/javascript" src="angular-0.10.4.min.js" ng:autobind></script>
+    <script type="text/javascript">
+        function SidewinderController() {
+            this.ALPHA_MODE = "Alpha mode";
+            this.BETA_MODE = "Beta mode";
+            this.GAMMA_MODE = "Gamma mode";
+
+            this.initAlphaMode();
+        }
+
+        SidewinderController.prototype = {
+
+            nextMode:function () {
+                if (this.mode === this.ALPHA_MODE) {
+                    this.initBetaMode();
+                } else if (this.mode === this.BETA_MODE) {
+                    this.initGammaMode();
+                } else {
+                    this.initAlphaMode();
+                }
+            },
+
+            initAlphaMode:function () {
+                this.mode = this.ALPHA_MODE;
+
+                this.s1 = "Nothing";
+                this.s2 = "Launch console";
+                this.s3 = "Nothing";
+                this.s4 = "Nothing";
+                this.s5 = "Nothing";
+                this.s6 = "Nothing";
+                this.s7 = "Nothing";
+                this.s8 = "Nothing";
+                this.s9 = "Nothing";
+                this.s10 = "Nothing";
+                this.s11 = "Nothing";
+                this.s12 = "Nothing";
+                this.s13 = "Nothing";
+                this.s14 = "Nothing";
+                this.s15 = "Nothing";
+                this.s16 = "Nothing";
+                this.s17 = "Nothing";
+                this.s18 = "Nothing";
+                this.s19 = "Nothing";
+                this.s20 = "Nothing";
+                this.s21 = "Nothing";
+                this.s22 = "Nothing";
+                this.s23 = "Nothing";
+                this.s24 = "Nothing";
+                this.s25 = "Nothing";
+                this.s26 = "Nothing";
+                this.s27 = "Nothing";
+                this.s28 = "Nothing";
+                this.s29 = "Nothing";
+                this.s30 = "Nothing";
+            },
+            initBetaMode:function () {
+                this.mode = this.BETA_MODE;
+
+                this.s1 = "Nothing";
+                this.s2 = "Nothing";
+                this.s3 = "Nothing";
+                this.s4 = "Nothing";
+                this.s5 = "Nothing";
+                this.s6 = "Nothing";
+                this.s7 = "Nothing";
+                this.s8 = "Nothing";
+                this.s9 = "Nothing";
+                this.s10 = "Nothing";
+                this.s11 = "Nothing";
+                this.s12 = "Nothing";
+                this.s13 = "Nothing";
+                this.s14 = "Nothing";
+                this.s15 = "Nothing";
+                this.s16 = "Nothing";
+                this.s17 = "Nothing";
+                this.s18 = "Nothing";
+                this.s19 = "Nothing";
+                this.s20 = "Nothing";
+                this.s21 = "Nothing";
+                this.s22 = "Nothing";
+                this.s23 = "Nothing";
+                this.s24 = "Nothing";
+                this.s25 = "Nothing";
+                this.s26 = "Nothing";
+                this.s27 = "Nothing";
+                this.s28 = "Nothing";
+                this.s29 = "Nothing";
+                this.s30 = "Nothing";
+            },
+            initGammaMode:function () {
+                this.mode = this.GAMMA_MODE;
+
+                this.s1 = "New commits in RTServices";
+                this.s2 = "Nothing";
+                this.s3 = "Nothing";
+                this.s4 = "Nothing";
+                this.s5 = "Nothing";
+                this.s6 = "Nothing";
+                this.s7 = "Nothing";
+                this.s8 = "Nothing";
+                this.s9 = "Nothing";
+                this.s10 = "Nothing";
+                this.s11 = "Nothing";
+                this.s12 = "Nothing";
+                this.s13 = "Nothing";
+                this.s14 = "Nothing";
+                this.s15 = "Nothing";
+                this.s16 = "Nothing";
+                this.s17 = "Nothing";
+                this.s18 = "Nothing";
+                this.s19 = "Nothing";
+                this.s20 = "Nothing";
+                this.s21 = "Nothing";
+                this.s22 = "Nothing";
+                this.s23 = "Nothing";
+                this.s24 = "Nothing";
+                this.s25 = "Nothing";
+                this.s26 = "Nothing";
+                this.s27 = "Nothing";
+                this.s28 = "Nothing";
+                this.s29 = "Nothing";
+                this.s30 = "Shutdown";
+            }
+        };
+    </script>
+
+</head>
+<body>
+<div id="keyboard" ng:controller="SidewinderController">
+    <h1>Sidewinder X6 Macro Bindings</h1>
+
+    <h2 ng:click="nextMode()">{{mode}}</h2>
+
+    <div class="col">
+        <div class="key">
+            <div class="desc">{{s1}}</div>
+            <span class="code">S1</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s2}}</div>
+            <span class="code">S2</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s3}}</div>
+            <span class="code">S3</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s4}}</div>
+            <span class="code">S4</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s5}}</div>
+            <span class="code">S5</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s6}}</div>
+            <span class="code">S6</span>
+        </div>
+    </div>
+    <div class="col">
+        <div class="key">
+            <div class="desc">{{s7}}</div>
+            <span class="code">S7</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s8}}</div>
+            <span class="code">S8</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s}}</div>
+            <span class="code">S9</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s10}}</div>
+            <span class="code">S10</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s11}}</div>
+            <span class="code">S11</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s12}}</div>
+            <span class="code">S12</span>
+        </div>
+    </div>
+
+    <div class="col pad">
+        <div class="key s13">
+            <div class="desc">{{s13}}</div>
+            <span class="code">S13</span>
+        </div>
+
+        <div class="col first">
+            <div class="key">
+                <div class="desc">{{s14}}</div>
+                <span class="code">S14</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s18}}</div>
+                <span class="code">S18</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s21}}</div>
+                <span class="code">S21</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s25}}</div>
+                <span class="code">S25</span>
+            </div>
+            <div class="key s28">
+                <div class="desc">{{s28}}</div>
+                <span class="code">S28</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="key">
+                <div class="desc">{{s15}}</div>
+                <span class="code">S15</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s19}}</div>
+                <span class="code">S19</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s22}}</div>
+                <span class="code">S22</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s26}}</div>
+                <span class="code">S26</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="key">
+                <div class="desc">{{s16}}</div>
+                <span class="code">S16</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s20}}</div>
+                <span class="code">S20</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s23}}</div>
+                <span class="code">S23</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s27}}</div>
+                <span class="code">S27</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s29}}</div>
+                <span class="code">S29</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="key">
+                <div class="desc">{{s17}}</div>
+                <span class="code">S17</span>
+            </div>
+            <div class="key s24">
+                <div class="desc">{{s24}}</div>
+                <span class="code">S24</span>
+            </div>
+            <div class="key s30">
+                <div class="desc">{{s30}}</div>
+                <span class="code">S30</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
