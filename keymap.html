@@ -19,6 +19,12 @@
             margin: 2px;
         }
 
+        .keyboard {
+            float: left;
+            clear: none;
+            margin: 2em;
+        }
+
         .key {
             border: black solid 1px;
 
@@ -213,9 +219,290 @@
 
 </head>
 <body>
-<div id="keyboard" ng:controller="SidewinderController">
-    <h1>Sidewinder X6 Macro Bindings</h1>
+<h1>Sidewinder X6 Macro Bindings</h1>
+<div class="keyboard" ng:controller="SidewinderController" ng:init="initAlphaMode()">
+    <h2 ng:click="nextMode()">{{mode}}</h2>
 
+    <div class="col">
+        <div class="key">
+            <div class="desc">{{s1}}</div>
+            <span class="code">S1</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s2}}</div>
+            <span class="code">S2</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s3}}</div>
+            <span class="code">S3</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s4}}</div>
+            <span class="code">S4</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s5}}</div>
+            <span class="code">S5</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s6}}</div>
+            <span class="code">S6</span>
+        </div>
+    </div>
+    <div class="col">
+        <div class="key">
+            <div class="desc">{{s7}}</div>
+            <span class="code">S7</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s8}}</div>
+            <span class="code">S8</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s}}</div>
+            <span class="code">S9</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s10}}</div>
+            <span class="code">S10</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s11}}</div>
+            <span class="code">S11</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s12}}</div>
+            <span class="code">S12</span>
+        </div>
+    </div>
+
+    <div class="col pad" ng:class="isPadActive()">
+        <div class="key s13">
+            <div class="desc">{{s13}}</div>
+            <span class="code">S13</span>
+        </div>
+
+        <div class="col first">
+            <div class="key">
+                <div class="desc">{{s14}}</div>
+                <span class="code">S14</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s18}}</div>
+                <span class="code">S18</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s21}}</div>
+                <span class="code">S21</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s25}}</div>
+                <span class="code">S25</span>
+            </div>
+            <div class="key s28">
+                <div class="desc">{{s28}}</div>
+                <span class="code">S28</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="key">
+                <div class="desc">{{s15}}</div>
+                <span class="code">S15</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s19}}</div>
+                <span class="code">S19</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s22}}</div>
+                <span class="code">S22</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s26}}</div>
+                <span class="code">S26</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="key">
+                <div class="desc">{{s16}}</div>
+                <span class="code">S16</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s20}}</div>
+                <span class="code">S20</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s23}}</div>
+                <span class="code">S23</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s27}}</div>
+                <span class="code">S27</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s29}}</div>
+                <span class="code">S29</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="key">
+                <div class="desc">{{s17}}</div>
+                <span class="code">S17</span>
+            </div>
+            <div class="key s24">
+                <div class="desc">{{s24}}</div>
+                <span class="code">S24</span>
+            </div>
+            <div class="key s30">
+                <div class="desc">{{s30}}</div>
+                <span class="code">S30</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="keyboard" ng:controller="SidewinderController" ng:init="initBetaMode()">
+    <h2 ng:click="nextMode()">{{mode}}</h2>
+
+    <div class="col">
+        <div class="key">
+            <div class="desc">{{s1}}</div>
+            <span class="code">S1</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s2}}</div>
+            <span class="code">S2</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s3}}</div>
+            <span class="code">S3</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s4}}</div>
+            <span class="code">S4</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s5}}</div>
+            <span class="code">S5</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s6}}</div>
+            <span class="code">S6</span>
+        </div>
+    </div>
+    <div class="col">
+        <div class="key">
+            <div class="desc">{{s7}}</div>
+            <span class="code">S7</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s8}}</div>
+            <span class="code">S8</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s}}</div>
+            <span class="code">S9</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s10}}</div>
+            <span class="code">S10</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s11}}</div>
+            <span class="code">S11</span>
+        </div>
+        <div class="key">
+            <div class="desc">{{s12}}</div>
+            <span class="code">S12</span>
+        </div>
+    </div>
+
+    <div class="col pad" ng:class="isPadActive()">
+        <div class="key s13">
+            <div class="desc">{{s13}}</div>
+            <span class="code">S13</span>
+        </div>
+
+        <div class="col first">
+            <div class="key">
+                <div class="desc">{{s14}}</div>
+                <span class="code">S14</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s18}}</div>
+                <span class="code">S18</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s21}}</div>
+                <span class="code">S21</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s25}}</div>
+                <span class="code">S25</span>
+            </div>
+            <div class="key s28">
+                <div class="desc">{{s28}}</div>
+                <span class="code">S28</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="key">
+                <div class="desc">{{s15}}</div>
+                <span class="code">S15</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s19}}</div>
+                <span class="code">S19</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s22}}</div>
+                <span class="code">S22</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s26}}</div>
+                <span class="code">S26</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="key">
+                <div class="desc">{{s16}}</div>
+                <span class="code">S16</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s20}}</div>
+                <span class="code">S20</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s23}}</div>
+                <span class="code">S23</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s27}}</div>
+                <span class="code">S27</span>
+            </div>
+            <div class="key">
+                <div class="desc">{{s29}}</div>
+                <span class="code">S29</span>
+            </div>
+        </div>
+        <div class="col">
+            <div class="key">
+                <div class="desc">{{s17}}</div>
+                <span class="code">S17</span>
+            </div>
+            <div class="key s24">
+                <div class="desc">{{s24}}</div>
+                <span class="code">S24</span>
+            </div>
+            <div class="key s30">
+                <div class="desc">{{s30}}</div>
+                <span class="code">S30</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="keyboard" ng:controller="SidewinderController" ng:init="initGammaMode()">
     <h2 ng:click="nextMode()">{{mode}}</h2>
 
     <div class="col">
