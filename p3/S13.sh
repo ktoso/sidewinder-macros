@@ -1,16 +1,7 @@
 #!/bin/sh
 source "`dirname $0`/../notify.sh"
-desc="S 13 macro"
+
+desc="Macro cheat sheet"
 tell "$desc"
 
-Xdialog --wrap --title "Shutdown `hostname`?"\
-        --yesno "Do you want to shut down `hostname`?" 0 0
-
-case $? in
-  0)
-    shutdown now;;
-  1)
-    echo "Will not shutdown.";;
-  255)
-    echo "Dialog closed, will not shutdown.";;
-esac
+chromium-browser $HOME/.sidewinderx6/keymap.html

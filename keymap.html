@@ -48,6 +48,10 @@
             clear: none;
         }
 
+        .inactive .key {
+            background: gray;
+        }
+
         .first {
             clear: left;
         }
@@ -94,9 +98,15 @@
                 }
             },
 
+            isPadActive: function () {
+              return this.pad ? '' : 'inactive';
+            },
+
+
             initAlphaMode:function () {
                 this.mode = this.ALPHA_MODE;
 
+                this.pad = false;
                 this.s1 = "Nothing";
                 this.s2 = "Launch console";
                 this.s3 = "Nothing";
@@ -131,6 +141,7 @@
             initBetaMode:function () {
                 this.mode = this.BETA_MODE;
 
+                this.pad = false;
                 this.s1 = "Nothing";
                 this.s2 = "Nothing";
                 this.s3 = "Nothing";
@@ -165,6 +176,7 @@
             initGammaMode:function () {
                 this.mode = this.GAMMA_MODE;
 
+                this.pad = true;
                 this.s1 = "New commits in RTServices";
                 this.s2 = "Nothing";
                 this.s3 = "Nothing";
@@ -177,7 +189,7 @@
                 this.s10 = "Nothing";
                 this.s11 = "Nothing";
                 this.s12 = "Nothing";
-                this.s13 = "Nothing";
+                this.s13 = "Macro cheat sheet";
                 this.s14 = "Nothing";
                 this.s15 = "Nothing";
                 this.s16 = "Nothing";
@@ -259,7 +271,7 @@
         </div>
     </div>
 
-    <div class="col pad">
+    <div class="col pad" ng:class="isPadActive()">
         <div class="key s13">
             <div class="desc">{{s13}}</div>
             <span class="code">S13</span>
