@@ -5,3 +5,4 @@ desc='Launching console...'
 tell "$desc"
 
 konsole
+xdotool ctrl+alt+a
